@@ -1,9 +1,14 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27107/scatch-core-platform-DB')
+
 
 const userSchema = mongoose.Schema({
-    fullname: String,
+    fullname: {
+        type: String,
+        minLength: 3,
+        trim: true,
+
+},
     email: String,
     password: String,
     cart: {
@@ -16,7 +21,7 @@ const userSchema = mongoose.Schema({
     },
     contact: Number,
     picture: String,
-    isadmin: Boolean,
+   
     
 })
 

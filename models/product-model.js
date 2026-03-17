@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 const productSchema = ({
     image: String,
     name: String,
